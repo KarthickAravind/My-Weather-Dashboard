@@ -8,7 +8,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = FastAPI()
-
+@app.get("/")
+def read_root():
+    return {"message": "Hello, World!"}
 # Enable CORS
 app.add_middleware(
     CORSMiddleware,
@@ -34,3 +36,4 @@ async def get_weather(city: CityName):
         if weather_response.status_code == 200:
             return weather_response.json()
     raise HTTPException(status_code=404, detail="City not found")
+print("Starting FastAPI app...")
