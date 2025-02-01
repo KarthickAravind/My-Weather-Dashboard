@@ -1,3 +1,89 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .app {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+  
+  /* Search Box */
+  .search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .search-box input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+  }
+  
+  .search-box button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: #2193b0;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .search-box button:hover {
+    background: #6dd5ed;
+  }
+  
+  /* Weather Card */
+  .weather-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+  
+  .weather-card h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+  
+  .temperature {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+  }
+  
+  .condition {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .humidity {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  /* Error Message */
+  .error {
+    color: #ff6b6b;
+    margin-top: 1rem;
   }
