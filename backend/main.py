@@ -9,13 +9,10 @@ load_dotenv()
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"message": "Hello, World!"}
 # Enable CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://weather-frontend-nwhg.onrender.com"],  # Allow your React app's origin
+    allow_origins=["https://weather-frontend-nwhg.onrender.com"],  # Allow your frontend's origin
     allow_credentials=True,
     allow_methods=["*"],  # Allow all methods
     allow_headers=["*"],  # Allow all headers
@@ -37,4 +34,3 @@ async def get_weather(city: CityName):
         if weather_response.status_code == 200:
             return weather_response.json()
     raise HTTPException(status_code=404, detail="City not found")
-print("Starting FastAPI app...")

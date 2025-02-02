@@ -10,7 +10,7 @@ function App() {
   const fetchWeather = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://my-weather-dashboard-egau.onrender.com', { name: city });
+      const response = await axios.post('https://my-weather-dashboard-egau.onrender.com/weather/', { name: city });
       setWeather(response.data);
       setError('');
     } catch (error) {
