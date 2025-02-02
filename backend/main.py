@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = FastAPI()
+
 @app.get("/")
 def read_root():
     return {"message": "Hello, World!"}
